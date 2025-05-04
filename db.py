@@ -3,7 +3,7 @@ import datetime
 
 # подключение к БД
 def get_connection():
-    return sqlite3.connect("data/boxclub.db")
+    return sqlite3.connect("/data/boxclub.db")
 
 # создание таблиц
 def init_db():

@@ -3,7 +3,7 @@ import datetime
 
 # подключение к БД
 def get_connection():
-    return sqlite3.connect("boxclub.db")
+    return sqlite3.connect("data/boxclub.db")
 
 # создание таблиц
 def init_db():
@@ -45,6 +45,8 @@ def init_db():
 
 # Функция для регистрации пользователя в базе данных
 def register_user(telegram_id, name):
+    init_db()
+
     conn = get_connection()
     cursor = conn.cursor()
 
